@@ -1,0 +1,10 @@
+
+    <div>
+        <ul >
+            <li *ngFor="let photo of photos">
+                <a target="_blank" [href]="photo.url">
+                    <img [src]="photo.thumbnailUrl" alt="Forest" style="width:150px">
+                  </a>
+            </li>
+        </ul>
+    </div>
