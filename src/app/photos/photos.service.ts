@@ -12,6 +12,6 @@ export class PhotoService{
 
 
     fetchPhotos(id: number){
-        return this.http.get<Photo[]>('http://jsonplaceholder.typicode.com/photos?albumId='+id);
+        return this.http.get<Photo[]>('https://jsonplaceholder.typicode.com/photos?albumId='+id);
     }
 }

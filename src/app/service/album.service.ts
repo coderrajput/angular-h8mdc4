@@ -11,7 +11,7 @@ export class AlbumService {
     constructor(private http: HttpClient){}
 
     fetchAlbums(){
-       return  this.http.get<Album[]>('http://jsonplaceholder.typicode.com/albums').pipe(tap((albums)=>{
+       return  this.http.get<Album[]>('https://jsonplaceholder.typicode.com/albums').pipe(tap((albums)=>{
                albums.map(singleAlbum=>{
                    this.fetchUser(singleAlbum.userId).subscribe((user: any)=>{
                     singleAlbum.userName= user[0].username;
@@ -24,6 +24,6 @@ export class AlbumService {
 
 
     fetchUser(id: number){
-        return this.http.get<any>('http://jsonplaceholder.typicode.com/users?id='+id);
+        return this.http.get<any>('https://jsonplaceholder.typicode.com/users?id='+id);
     }
 }
