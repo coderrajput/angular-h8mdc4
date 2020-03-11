@@ -11,6 +11,8 @@ export class AlbumsComponent implements OnInit {
 
   constructor(private albumService: AlbumService) { }
   albums: Album[]=[];
+   totalRec : number;
+  page: number = 1;
 
   ngOnInit() {
     this.getAlbums();
@@ -18,7 +20,8 @@ export class AlbumsComponent implements OnInit {
 
 
   getAlbums(){
-
+    this.page=1;
+    this.totalRec=this.albums.length;
     this.albumService.fetchAlbums().subscribe( (albums)=>{
       this.albums=albums;
       console.log(this.albums);
