@@ -11,8 +11,9 @@ import { Photo } from '../model/photo.model';
 export class PhotosComponent implements OnInit{
     photos: Photo[]=[];
     albumId: number;
+    isLoading: boolean;
     ngOnInit(){
-        
+        this.isLoading=true;
         this.route.params.subscribe((params: Params)=>{
             this.albumId=+params['id'];
             this.fetchPhotos(this.albumId);
@@ -26,6 +27,7 @@ export class PhotosComponent implements OnInit{
         this.photoService.fetchPhotos(id).subscribe((photos)=>{
             this.photos=photos;
             console.log(this.photos);
+            this.isLoading=false;
         });
     }
 }

@@ -18,5 +18,14 @@ img {
 
   div{
       overflow: auto;
-      margin-left: 51px;
+     
+  }
+
+   .pagination{
+    text-align: center;
+  }
+
+  .photos{
+    margin-left: 15%;
+    margin-right: 10%
   }

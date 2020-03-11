@@ -1,10 +1,23 @@
+  
+  <div  *ngIf="isLoading">
 
-    <div>
+    <app-loading-indicator ></app-loading-indicator>
+  </div>
+  <div *ngIf="!isLoading">
+
+    <div class="pagination">
+        <pagination-controls (pageChange)="p=$event"></pagination-controls>
+    </div>
+
+    <div class="photos">
         <ul >
-            <li *ngFor="let photo of photos">
+            <li *ngFor="let photo of photos  | paginate:{itemsPerPage: 15, currentPage:p}">
                 <a target="_blank" [href]="photo.url">
                     <img [src]="photo.thumbnailUrl" alt="Forest" style="width:150px">
                   </a>
             </li>
+            
         </ul>
+       
     </div>
+   </div>
