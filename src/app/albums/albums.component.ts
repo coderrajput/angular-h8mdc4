@@ -24,7 +24,7 @@ export class AlbumsComponent implements OnInit {
     this.totalRec=this.albums.length;
     this.albumService.fetchAlbums().subscribe( (albums)=>{
       this.albums=albums;
-      console.log(this.albums);
+      //console.log(this.albums);
   });
   
   }

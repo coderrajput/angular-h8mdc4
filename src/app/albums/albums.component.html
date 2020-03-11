@@ -1,7 +1,9 @@
-
+  <pagination-controls class="paginat" id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
 <div class="container">
+
   <app-individual-album [album]="album" [index]="album.id" *ngFor="let album of albums | paginate: { id: 'listing_pagination',
                                                       itemsPerPage: 10,
                                                       currentPage: page,
                                                       totalItems: totalRec}"></app-individual-album>
+                                                      
 </div>
