@@ -1,4 +1,4 @@
-  
+  <ng-template photoHolder ></ng-template>
   <div  *ngIf="isLoading">
 
     <app-loading-indicator ></app-loading-indicator>
@@ -9,10 +9,10 @@
         <pagination-controls (pageChange)="p=$event"></pagination-controls>
     </div>
 
-    <div class="photos">
+    <div>
         <ul >
             <li *ngFor="let photo of photos  | paginate:{itemsPerPage: 15, currentPage:p}">
-                <a target="_blank" [href]="photo.url">
+                <a (click)="showPhoto(photo.url)">
                     <img [src]="photo.thumbnailUrl" alt="Forest" style="width:150px">
                   </a>
             </li>

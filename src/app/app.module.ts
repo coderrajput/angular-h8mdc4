@@ -12,9 +12,13 @@ import { PhotosComponent } from './photos/photos.component';
 import { ShortenTitlePipe } from './pipe/shorten-title.pipe';
 import { LoadingIndicatorComponent } from './loading-indicator/loading-indicator.component';
 
+
 @NgModule({
   imports:      [ BrowserModule, FormsModule,HttpClientModule,AppRoutingModule,NgxPaginationModule ],
-  declarations: [ AppComponent , AlbumsComponent,IndividualAlbumComponent,PhotosComponent,ShortenTitlePipe, LoadingIndicatorComponent],
-  bootstrap:    [ AppComponent ]
+  declarations: [ AppComponent , AlbumsComponent,IndividualAlbumComponent,PhotosComponent,ShortenTitlePipe, LoadingIndicatorComponent,PhotoDirective,Photocomponent],
+  bootstrap:    [ AppComponent ],
+  entryComponents:[
+    Photocomponent
+  ]
 })
 export class AppModule { }
