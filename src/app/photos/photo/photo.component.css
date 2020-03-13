@@ -13,7 +13,7 @@
     top: 2vh;
     left: 20vw;
     width: 600px;
-    padding: 16px;
+    padding: 2px 16px 16px 16px;
     z-index: 100;
     background: white;
     box-shadow: 0 2px 8px rbga(0, 0, 0, 0.26);
