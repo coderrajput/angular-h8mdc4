@@ -11,7 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { PhotosComponent } from './photos/photos.component';
 import { ShortenTitlePipe } from './pipe/shorten-title.pipe';
 import { LoadingIndicatorComponent } from './loading-indicator/loading-indicator.component';
-
+import { Photocomponent  } from './photos/photo/photo.component';
+import {PhotoDirective} from './photos/photo.directive';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,HttpClientModule,AppRoutingModule,NgxPaginationModule ],
